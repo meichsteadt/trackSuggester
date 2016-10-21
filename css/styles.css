@@ -27,3 +27,12 @@ body {
   right: 100%;
   top:-6px;
 }
+
+h1:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.codeImg {
+  padding: 10px;
+}
