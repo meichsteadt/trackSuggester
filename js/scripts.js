@@ -49,49 +49,12 @@ function scoreQuiz(arr) {
   else if(css === cSharp) {
     result = "It's tied between <em>CSS</em> and <em>C#</em>";
     img = cssImg + cSharpImg;
-    append = "";
+    append = "What a predicament. Looks like you've got an internal struggle going on. On one hand, you want to creative and daring. You want to make beautiful designs that capture people's attention. On the other hand, you crave structure and framework and want that piece of you to be reflected in your coding language. Hmm. All this quiz did was weed out Ruby.";
   }
   else if(ruby === cSharp) {
     result = "It's tied between <em>Ruby</em> and <em>C#</em>";
     img = rubyImg + cSharpImg;
-    append = "";
-  }
-}
-
-function img(arr) {
-  var cSharp = 0, css=0, ruby=0;
-  for(var i=0;i<arr.length;i++) {
-    if(arr[i] === "cSharp") {
-      cSharp++;
-    }
-    else if(arr[i] === "ruby") {
-      ruby++;
-    }
-    else if (arr[i] === "css") {
-      css++;
-    }
-  }
-  if(css === ruby && css === cSharp) {
-    return "It's dead even. Looks like this quiz didn't help much.";
-    img = rubyImg;
-  }
-  else if(css > ruby && css > cSharp) {
-    return "You got CSS";
-  }
-  else if (ruby > cSharp && ruby > css) {
-    return "You got Ruby";
-  }
-  else if(cSharp > ruby && cSharp > css){
-    return "You got C#";
-  }
-  else if(css === ruby) {
-    return "It's tied between CSS and Ruby";
-  }
-  else if(css === cSharp) {
-    return "It's tied between CSS and C#";
-  }
-  else if(ruby === cSharp) {
-    return "It's tied between Ruby and C#";
+    append = "Stop what you're doing, close your eyes(not yet), and think \"What kind of company do I see myself working at?\" If it's a smaller company where everyone is responsible for many thing Ruby might be your thing. If it's a bigger, established company where you do one role C# could be for you.";
   }
 }
 
