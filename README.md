@@ -10,8 +10,8 @@ _Picking a programming language can be a daunting task. Luckily I have designed 
 
 ## Setup/Installation Requirements
 
-_Clone the repository_
-_Open the index.html file_
+_Clone the repository,_
+_open the index.html file,_
 _OR_
 _just visit meichsteadt.github.io/trackSuggester_
 
