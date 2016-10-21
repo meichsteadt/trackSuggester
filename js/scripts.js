@@ -1,11 +1,11 @@
 //=========================== Global Variables ==============================================
 var img, result, append = "";
-var rubyImg = '<img class="codeImg" src="img/ruby.png" alt="ruby picture">';
-var cSharpImg = '<img class="codeImg" src="img/cSharp.png" alt="c# picture">';
-var cssImg = '<img class="codeImg" src="img/css.png" alt="css picture">';
-var railsImg = '<img class="codeImg" src="img/rails.png" alt="ruby picture">';
-var designImg = '<img class="codeImg" src="img/design.png" alt="ruby picture">';
-var netImg = '<img class="codeImg" src="img/net.png" alt="ruby picture">';
+var rubyImg = '<a href="http:\/\/www.epicodus.com\/ruby"><img class="codeImg" src="img/ruby.png" alt="ruby picture"></a>';
+var cSharpImg = '<a href="http:\/\/www.epicodus.com\/c-sharp"><img class="codeImg" src="img/cSharp.png" alt="c# picture"></a>';
+var cssImg = '<a href="http:\/\/www.epicodus.com\/css"><img class="codeImg" src="img/css.png" alt="css picture"></a>';
+var railsImg = '<a href="http:\/\/www.epicodus.com\/rails"><img class="codeImg" src="img/rails.png" alt="ruby picture"></a>';
+var designImg = '<a href="http:\/\/www.epicodus.com\/design"><img class="codeImg" src="img/design.png" alt="ruby picture"></a>';
+var netImg = '<a href="http:\/\/www.epicodus.com\/net"><img class="codeImg" src="img/net.png" alt="ruby picture"></a>';
 
 //=========================== Back end ======================================================
 function scoreQuiz(arr) {
@@ -27,32 +27,32 @@ function scoreQuiz(arr) {
     append = "Looks like this quiz didn't help much."
   }
   else if(css > ruby && css > cSharp) {
-    result = "You got <em>CSS</em> and <em>Design</em>";
+    result = 'You got <a href="http:\/\/www.epicodus.com\/css">CSS</a> and <a href="http:\/\/www.epicodus.com\/design">Design</a>';
     img = cssImg + designImg;
     append = "Front-end developers spend their time making things look and work well, obsessing over layouts, navigation, colors, and design. If this type of work appeals to you, your best bet is to take CSS and Design classes at Epicodus.";
   }
   else if (ruby > cSharp && ruby > css) {
-    result = "You got <em>Ruby</em> and <em>Rails</em>";
+    result = 'You got <a href="http:\/\/www.epicodus.com\/ruby">Ruby</a> and <a href="http:\/\/www.epicodus.com\/rails">Rails</a>';
     img = rubyImg + railsImg;
     append = "Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. It's most popular with startups and smaller companies who are looking to build their product quickly.";
   }
   else if(cSharp > ruby && cSharp > css){
-    result = "You got <em>C#</em> and <em>.Net</em>";
+    result = 'You got <a href="http:\/\/www.epicodus.com\/c-sharp">C#</a> and <a href="http:\/\/www.epicodus.com\/net">.Net</a>';
     img = cSharpImg + netImg;
     append = "C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. If you like the idea of working for a larger company on business software, C# is a great choice.";
   }
   else if(css === ruby) {
-    result = "It's tied between <em>CSS</em> and <em>Ruby</em>";
+    result = 'It\'s tied between <a href="http:\/\/www.epicodus.com\/css">CSS</a> and <a href="http:\/\/www.epicodus.com\/ruby">Ruby</a>';
     img = cssImg + rubyImg;
     append = "Front-end or back-end? That's what you really need to decide here. Do you prefer the subjectivity that CSS and Design can provide, or having a clear result that back-end development needs to achieve?";
   }
   else if(css === cSharp) {
-    result = "It's tied between <em>CSS</em> and <em>C#</em>";
+    result = 'It\'s tied between <a href="http:\/\/www.epicodus.com\/css">CSS</a> and <a href="http:\/\/www.epicodus.com\/c-sharp">C#</a>';
     img = cssImg + cSharpImg;
     append = "What a predicament. Looks like you've got an internal struggle going on. On one hand, you want to creative and daring. You want to make beautiful designs that capture people's attention. On the other hand, you crave structure and framework and want that piece of you to be reflected in your coding language. Hmm. All this quiz did was weed out Ruby.";
   }
   else if(ruby === cSharp) {
-    result = "It's tied between <em>Ruby</em> and <em>C#</em>";
+    result = 'It\'s tied between <a href="http:\/\/www.epicodus.com\/ruby">Ruby</a> and <a href="http:\/\/www.epicodus.com\/c-sharp">C#</a>';
     img = rubyImg + cSharpImg;
     append = "Stop what you're doing, close your eyes(not yet), and think \"What kind of company do I see myself working at?\" If it's a smaller company where everyone is responsible for many thing Ruby might be your thing. If it's a bigger, established company where you do one role C# could be for you.";
   }
@@ -96,7 +96,7 @@ $(function() {
     };
 
     $('.try-again').hide();
-    
+
     if(!checkInput(answers)) {
       $('.try-again').show();
     }

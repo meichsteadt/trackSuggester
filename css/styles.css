@@ -6,6 +6,13 @@ h1,h2,h3, {
   font-family: 'Roboto Mono', monospace;
 }
 
+a, a:visited {
+  color: #00b3b4;
+}
+
+a:hover {
+  color: rgba(0,179,180,.7);
+}
 em {
   color: #00b3b4;
   font-style: normal;
