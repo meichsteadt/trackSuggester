@@ -17,182 +17,184 @@
   <body>
     <div class="container">
       <div class="row" id="quiz">
-        <div class="col-md-12 text-center">
-          <h1>Which track should you take?</h1>
-          <p>There are many exciting options. For our October class let's decide between CSS, Ruby and Rails, and C#.</p>
-        </div>
-        <div class="col-md-12 underline"></div>
-        <ol>
-          <div class="col-md-12 question">
-            <li><p>When I work on a project I tend to:</p>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="project" value="cSharp">
-                  Take my time, working from the ground up to finish it.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="project" value="css">
-                  Spend most of my time thinking about how it will be used.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="project" value="ruby">
-                  Finish it as quickly as possible, using any resource I have.
-                </label>
-              </div>
-            </li>
+        <form>
+          <div class="col-md-12 text-center">
+            <h1>Which track should you take?</h1>
+            <p>There are many exciting options. For our October class let's decide between CSS, Ruby and Rails, and C#.</p>
           </div>
-          <div class="col-md-12 question">
-            <li>Which of these sounds like the most fun
-            <div class="radio">
-              <label>
-                <input type="radio" name="fun" value="ruby">
-                Creating dynamic web applications in a startup environment.
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="fun" value="css">
-                Creating stunning, well-designed, web pages that tell a story.
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="fun" value="cSharp">
-                Creating robust business software for established companies.
-              </label>
-            </div>
-            </li>
-          </div>
-          <div class="col-md-12 question">
-            <li>How much do you agree with the following statement? <p>"I like things to be simple"</p>
-              <div class="radio">
-              <label>
-                <input type="radio" name="simple" value="cSharp" >
-                Disagree
-              </label>
-            </div>
-              <div class="radio">
-              <label>
-                <input type="radio" name="simple" value="css" >
-                Neither agree nor disagree
-              </label>
-            </div>
-              <div class="radio">
-              <label>
-                <input type="radio" name="simple" value="ruby" >
-                Agree
-              </label>
-            </div>
-            </li>
-          </div>
-          <div class="col-md-12 question">
-            <li>Which profession could you see yourself doing?
-              <div class="radio">
-                <label>
-                  <input type="radio" name="job" value="cSharp">
-                  Architect
-                </label>
+          <div class="col-md-12 underline"></div>
+          <ol>
+            <div class="col-md-12 question">
+              <li><p>When I work on a project I tend to:</p>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="project" value="cSharp">
+                    Take my time, working from the ground up to finish it.
+                  </label>
                 </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="project" value="css">
+                    Spend most of my time thinking about how it will be used.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="project" value="ruby">
+                    Finish it as quickly as possible, using any resource I have.
+                  </label>
+                </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>Which of these sounds like the most fun
               <div class="radio">
                 <label>
-                  <input type="radio" name="job" value="css">
-                  Chef
+                  <input type="radio" name="fun" value="ruby">
+                  Creating dynamic web applications in a startup environment.
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="job" value="ruby">
-                  Pilot
+                  <input type="radio" name="fun" value="css">
+                  Creating stunning, well-designed, web pages that tell a story.
                 </label>
               </div>
-            </li>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="fun" value="cSharp">
+                  Creating robust business software for established companies.
+                </label>
+              </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>How much do you agree with the following statement? <p>"I like things to be simple"</p>
+                <div class="radio">
+                <label>
+                  <input type="radio" name="simple" value="cSharp" >
+                  Disagree
+                </label>
+              </div>
+                <div class="radio">
+                <label>
+                  <input type="radio" name="simple" value="css" >
+                  Neither agree nor disagree
+                </label>
+              </div>
+                <div class="radio">
+                <label>
+                  <input type="radio" name="simple" value="ruby" >
+                  Agree
+                </label>
+              </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>Which profession could you see yourself doing?
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="job" value="cSharp">
+                    Architect
+                  </label>
+                  </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="job" value="css">
+                    Chef
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="job" value="ruby">
+                    Pilot
+                  </label>
+                </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>Time for shots! What are you drinking?
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="shot" value="ruby">
+                    Whatever the bartender suggests.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="shot" value="css">
+                    Ooh! I’ve got one I made up. It’s amazing!
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="shot" value="cSharp">
+                    Whiskey. Straight. No chaser.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="shot" value="lame">
+                    I don’t really do shots.
+                  </label>
+                </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>You’re visiting a new city, what does your stay look like?
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="travel" value="css">
+                    I get an apartment from AirBNB and have a friend show me around to all of the local spots.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="travel" value="ruby">
+                    I don’t know. A decent hotel and walking the streets just kind of checking it out until I find something cool.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="travel" value="cSharp">
+                    I already have it all planned out. Breakfast at 8, sightseeing until 4, then back to the hotel to get ready for dinner.
+                  </label>
+                </div>
+              </li>
+            </div>
+            <div class="col-md-12 question">
+              <li>Which of these is the most pointless super-power
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="power" value="power">
+                    The ability to read your own mind.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="power" value="power2">
+                    The ability to turn invisible, but only when it’s pitch black.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="power" value="power3">
+                    The ability to read brail by looking at it.
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="power" value="power4">
+                    The ability to see through walls, but only if there is a window where you are looking.
+                  </label>
+                </div>
+              </li>
+            </div>
+          </ol>
+          <div class="col-md-11 col-md-offset-1">
+            <button class="btn btn-default" id="submit-button" type="submit" name="button">Submit</button>
           </div>
-          <div class="col-md-12 question">
-            <li>Time for shots! What are you drinking?
-              <div class="radio">
-                <label>
-                  <input type="radio" name="shot" value="ruby">
-                  Whatever the bartender suggests.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="shot" value="css">
-                  Ooh! I’ve got one I made up. It’s amazing!
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="shot" value="cSharp">
-                  Whiskey. Straight. No chaser.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="shot" value="lame">
-                  I don’t really do shots.
-                </label>
-              </div>
-            </li>
-          </div>
-          <div class="col-md-12 question">
-            <li>You’re visiting a new city, what does your stay look like?
-              <div class="radio">
-                <label>
-                  <input type="radio" name="travel" value="css">
-                  I get an apartment from AirBNB and have a friend show me around to all of the local spots.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="travel" value="ruby">
-                  I don’t know. A decent hotel and walking the streets just kind of checking it out until I find something cool.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="travel" value="cSharp">
-                  I already have it all planned out. Breakfast at 8, sightseeing until 4, then back to the hotel to get ready for dinner.
-                </label>
-              </div>
-            </li>
-          </div>
-          <div class="col-md-12 question">
-            <li>Which of these is the most pointless super-power
-              <div class="radio">
-                <label>
-                  <input type="radio" name="power" value="power">
-                  The ability to read your own mind.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="power" value="power2">
-                  The ability to turn invisible, but only when it’s pitch black.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="power" value="power3">
-                  The ability to read brail by looking at it.
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="power" value="power4">
-                  The ability to see through walls, but only if there is a window where you are looking.
-                </label>
-              </div>
-            </li>
-          </div>
-        </ol>
-        <div class="col-md-11 col-md-offset-1">
-          <button class="btn btn-default submit-button" type="submit" name="button">Submit</button>
-        </div>
+        </form>
       </div>
     </div>
   </body>
