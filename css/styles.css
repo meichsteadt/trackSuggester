@@ -1,5 +1,9 @@
 body {
-  font-family: monospace;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3, {
+  font-family: 'Roboto Mono', monospace;
 }
 
 .question {
@@ -26,11 +30,6 @@ body {
   display: none;
   right: 100%;
   top:-6px;
-}
-
-h1:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .codeImg {

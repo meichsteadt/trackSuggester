@@ -3,6 +3,9 @@ var img, result, append = "";
 var rubyImg = '<img class="codeImg" src="img/ruby.png" alt="ruby picture">';
 var cSharpImg = '<img class="codeImg" src="img/cSharp.png" alt="c# picture">';
 var cssImg = '<img class="codeImg" src="img/css.png" alt="css picture">';
+var railsImg = '<img class="codeImg" src="img/rails.png" alt="ruby picture">';
+var designImg = '<img class="codeImg" src="img/design.png" alt="ruby picture">';
+var netImg = '<img class="codeImg" src="img/net.png" alt="ruby picture">';
 
 //=========================== Back end ======================================================
 function scoreQuiz(arr) {
@@ -20,34 +23,36 @@ function scoreQuiz(arr) {
   }
   if(css === ruby && css === cSharp) {
     result = "It's dead even.";
-    img = rubyImg + cSharpImg + cssImg;
+    img = rubyImg + railsImg + cSharpImg + netImg + cssImg + designImg;
     append = "Looks like this quiz didn't help much."
   }
   else if(css > ruby && css > cSharp) {
-    result = "You got CSS";
-    img = cssImg;
-    append = "";
+    result = "You got <em>CSS</em> and <em>Design</em>";
+    img = cssImg + designImg;
+    append = "Front-end developers spend their time making things look and work well, obsessing over layouts, navigation, colors, and design. If this type of work appeals to you, your best bet is to take CSS and Design classes at Epicodus.";
   }
   else if (ruby > cSharp && ruby > css) {
-    result = "You got Ruby";
-    img = rubyImg;
-    append = "";
+    result = "You got <em>Ruby</em> and <em>Rails</em>";
+    img = rubyImg + railsImg;
+    append = "Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. It's most popular with startups and smaller companies who are looking to build their product quickly.";
   }
   else if(cSharp > ruby && cSharp > css){
-    result = "You got C#";
-    img = cSharpImg;
+    result = "You got <em>C#</em> and <em>.Net</em>";
+    img = cSharpImg + netImg;
+    append = "C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. If you like the idea of working for a larger company on business software, C# is a great choice.";
   }
   else if(css === ruby) {
-    result = "It's tied between CSS and Ruby";
+    result = "It's tied between <em>CSS</em> and <em>Ruby</em>";
     img = cssImg + rubyImg;
+    append = "Front-end or back-end? That's what you really need to decide here. Do you prefer the subjectivity that CSS and Design can provide, or having a clear result that back-end development needs to achieve?";
   }
   else if(css === cSharp) {
-    result = "It's tied between CSS and C#";
+    result = "It's tied between <em>CSS</em> and <em>C#</em>";
     img = cssImg + cSharpImg;
     append = "";
   }
   else if(ruby === cSharp) {
-    result = "It's tied between Ruby and C#";
+    result = "It's tied between <em>Ruby</em> and <em>C#</em>";
     img = rubyImg + cSharpImg;
     append = "";
   }
@@ -134,25 +139,18 @@ $(function() {
     }
     else {
       scoreQuiz(answers);
-      $('#result').append('<h1>' + result + '</h1>');
+      $('#result').append('<h2>' + result + '</h2>');
       $('#result').append('<h4>' + append + '</h4>')
       $('#result').append(img);
       $('#result').show();
       $('#quiz').hide();
     }
+
     event.preventDefault();
   });
 
   $('#lame').click(function() {
     $('.lame').show();
     $('#lame').attr('disabled', 'true');
-
-  });
-
-  $('h1').click(function() {
-    $('#quiz').hide();
-    //$('#result').append('<h1>You should take ' + result(answers) +'</h1>');
-    $('#result').append(cssImg);
-    $('#result').show();
   });
 });
