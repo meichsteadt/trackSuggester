@@ -1,4 +1,4 @@
-//=========================== Backend ======================================================
+//=========================== Back end ======================================================
 function result(arr) {
   var cSharp = 0, css=0, ruby=0;
   for(var i=0;i<arr.length;i++) {
@@ -12,7 +12,6 @@ function result(arr) {
       css++;
     }
   }
-  console.log(css, ruby, cSharp);
   if(css === ruby && css === cSharp) {
     return "Ruby, C#, and CSS";
   }
@@ -34,13 +33,20 @@ function result(arr) {
   else if(ruby === cSharp) {
     return "Ruby and C#";
   }
+  console.log("css:" + css, 'ruby:' + ruby, 'c#:' + cSharp);
 }
 
+function checkInput(arr) {
+  var blanks = [];
+  for(var i=0;i<arr.length;i++) {
+    if(!arr[i]) {
+      return false;
+    }
+  }
+  return true;
+}
 
-
-
-
-//=========================== Frontend ==========================================
+//=========================== Front end ==========================================
 $(function() {
   $('#quiz form').submit(function(event) {
     var project = $('input:radio[name="project"]:checked').val();
@@ -50,9 +56,40 @@ $(function() {
     var shot = $('input:radio[name="shot"]:checked').val();
     var travel = $('input:radio[name="travel"]:checked').val();
     var power = $('input:radio[name="power"]:checked').val();
-    var arr = [project, fun, simple, job, shot, travel, power];
+    var answers = [project, fun, simple, job, shot, travel, power];
+    var questions = ["project", "fun", "simple", "job", "shot", "travel", "power"];
 
-    console.log(result(arr));
+    for(var i=0;i<questions.length;i++) {
+      if(!$('input:radio[name="' + questions[i] + '"]:checked').val()){
+        $('#'+questions[i]).addClass('has-error');
+      }
+      else {
+        $('#'+ questions[i]).removeClass('has-error');
+      }
+      if($('#'+ questions[i]).hasClass('has-error')) {
+        $('#'+ questions[i]).children('.glyphicon-remove').show();
+      }
+      else {
+        $('#'+ questions[i]).children('.glyphicon-remove').hide();
+      }
+    };
+
+    $('.try-again').hide();
+    if(!checkInput(answers)) {
+      $('.try-again').show();
+    }
+    else {
+      $('#result').append('<h1>You should take ' + result(answers) +'</h1>');
+      $('#result').show();
+      $('#quiz').hide();
+    }
     event.preventDefault();
   });
+
+  $('#lame').click(function() {
+    $('.lame').show();
+    $('#lame').attr('disabled', 'true');
+  });
+
+
 })

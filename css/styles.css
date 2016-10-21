@@ -9,3 +9,21 @@ body {
 .underline {
   border-bottom: 2px solid black;
 }
+
+.lame, .try-again {
+  display: none;
+}
+
+.try-again {
+  color: #a94442;
+}
+
+.col-md-11{
+  margin-bottom: 100px;
+}
+
+.glyphicon-remove {
+  display: none;
+  right: 100%;
+  top:-6px;
+}

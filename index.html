@@ -16,16 +16,19 @@
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>Which track should you take?</h1>
+          <p>There are many exciting options. For our October class let's decide between CSS, Ruby and Rails, and C#.</p>
+        </div>
+        <div class="col-md-12 underline"></div>
+      </div>
       <div class="row" id="quiz">
         <form>
-          <div class="col-md-12 text-center">
-            <h1>Which track should you take?</h1>
-            <p>There are many exciting options. For our October class let's decide between CSS, Ruby and Rails, and C#.</p>
-          </div>
-          <div class="col-md-12 underline"></div>
           <ol>
             <div class="col-md-12 question">
-              <li><p>When I work on a project I tend to:</p>
+              <li id="project" class=""><p>When I work on a project I tend to:</p>
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                   <label>
                     <input type="radio" name="project" value="cSharp">
@@ -47,7 +50,8 @@
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>Which of these sounds like the most fun
+              <li id="fun">Which of these sounds like the most fun
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
               <div class="radio">
                 <label>
                   <input type="radio" name="fun" value="ruby">
@@ -69,7 +73,8 @@
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>How much do you agree with the following statement? <p>"I like things to be simple"</p>
+              <li id="simple">How much do you agree with the following statement? <p>"I like things to be simple"</p>
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                 <label>
                   <input type="radio" name="simple" value="cSharp" >
@@ -91,7 +96,8 @@
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>Which profession could you see yourself doing?
+              <li id="job">Which profession could you see yourself doing?
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                   <label>
                     <input type="radio" name="job" value="cSharp">
@@ -113,7 +119,8 @@
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>Time for shots! What are you drinking?
+              <li id="shot">Time for shots! What are you drinking?
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                   <label>
                     <input type="radio" name="shot" value="ruby">
@@ -134,14 +141,16 @@
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="shot" value="lame">
+                    <input type="radio" name="shot" value="" id="lame">
                     I don’t really do shots.
+                    <p class="text-muted lame">You should live a little.</p>
                   </label>
                 </div>
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>You’re visiting a new city, what does your stay look like?
+              <li id="travel">You’re visiting a new city, what does your stay look like?
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                   <label>
                     <input type="radio" name="travel" value="css">
@@ -163,7 +172,8 @@
               </li>
             </div>
             <div class="col-md-12 question">
-              <li>Which of these is the most pointless super-power
+              <li id="power">Which of these is the most pointless super-power
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
                 <div class="radio">
                   <label>
                     <input type="radio" name="power" value="power">
@@ -193,8 +203,12 @@
           </ol>
           <div class="col-md-11 col-md-offset-1">
             <button class="btn btn-default" id="submit-button" type="submit" name="button">Submit</button>
+            <p class="try-again">Please fill out all questions</p>
           </div>
         </form>
+      </div>
+      <div class="col-md-12 text-center" id="result">
+
       </div>
     </div>
   </body>
