@@ -1,0 +1,11 @@
+body {
+  font-family: monospace;
+}
+
+.question {
+  margin: 20px;
+}
+
+.underline {
+  border-bottom: 2px solid black;
+}
