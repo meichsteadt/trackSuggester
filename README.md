@@ -13,7 +13,7 @@ _Picking a programming language can be a daunting task. Luckily I have designed 
 _Clone the repository,_
 _open the index.html file,_
 _OR_
-_just visit meichsteadt.github.io/trackSuggester_
+_just visit [here](https://meichsteadt.github.io/trackSuggester)_
 
 ## Known Bugs
 
