@@ -7,7 +7,11 @@ h1,h2,h3, {
 }
 
 .question {
-  margin: 20px;
+  margin: 40px 20px;
+}
+
+ol:first-child div {
+  margin-top: 10px;
 }
 
 .underline {
@@ -24,6 +28,8 @@ h1,h2,h3, {
 
 .col-md-11{
   margin-bottom: 100px;
+  padding-left: 100px;
+
 }
 
 .glyphicon-remove {
@@ -34,4 +40,16 @@ h1,h2,h3, {
 
 .codeImg {
   padding: 10px;
+}
+
+@media screen and (min-width: 762px) {
+  .question {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-md-11{
+    padding-left: 0px;
+  }
 }
