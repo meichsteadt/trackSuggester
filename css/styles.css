@@ -6,6 +6,11 @@ h1,h2,h3, {
   font-family: 'Roboto Mono', monospace;
 }
 
+em {
+  color: #00b3b4;
+  font-style: normal;
+}
+
 .question {
   margin: 40px 20px;
 }
@@ -18,10 +23,13 @@ ol:first-child div {
   border-bottom: 2px solid black;
 }
 
-.lame, .try-again {
+.lame, .lamer, .try-again, #result {
   display: none;
 }
 
+.lame {
+  color: #00b3b4;
+}
 .try-again {
   color: #a94442;
 }

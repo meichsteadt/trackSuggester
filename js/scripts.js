@@ -22,7 +22,7 @@ function scoreQuiz(arr) {
     }
   }
   if(css === ruby && css === cSharp) {
-    result = "It's dead even.";
+    result = "It's dead even";
     img = rubyImg + railsImg + cSharpImg + netImg + cssImg + designImg;
     append = "Looks like this quiz didn't help much."
   }
@@ -59,7 +59,6 @@ function scoreQuiz(arr) {
 }
 
 function checkInput(arr) {
-  var blanks = [];
   for(var i=0;i<arr.length;i++) {
     if(!arr[i]) {
       return false;
@@ -82,7 +81,7 @@ $(function() {
     var questions = ["project", "fun", "simple", "job", "shot", "travel", "power"];
 
     for(var i=0;i<questions.length;i++) {
-      if(!$('input:radio[name="' + questions[i] + '"]:checked').val()){
+      if(!$('input:radio[name="' + questions[i] + '"]:checked').val()) {
         $('#'+questions[i]).addClass('has-error');
       }
       else {
@@ -97,15 +96,16 @@ $(function() {
     };
 
     $('.try-again').hide();
+    
     if(!checkInput(answers)) {
       $('.try-again').show();
     }
     else {
       scoreQuiz(answers);
       $('#result').append('<h2>' + result + '</h2>');
-      $('#result').append('<h4>' + append + '</h4>')
+      $('#result').append('<h4>' + append + '</h4>');
       $('#result').append(img);
-      $('#result').show();
+      $('#result').fadeIn();
       $('#quiz').hide();
     }
 
@@ -113,7 +113,7 @@ $(function() {
   });
 
   $('#lame').click(function() {
-    $('.lame').show();
+    $('.lame').fadeIn();
     $('#lame').attr('disabled', 'true');
   });
 });
